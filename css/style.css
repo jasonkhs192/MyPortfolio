@@ -978,6 +978,16 @@ ul.side-nav li.sn-item > a > i {
 }
 }
 
+@-webkit-keyframes Rx-width-30 {
+ 0% {
+  width: 0%;
+}
+
+100% {
+  width: 30%;
+}
+}
+
 .Rx-width-90 {
   -webkit-animation-name: Rx-width-90;
   -o-animation-name: Rx-width-90;
@@ -1017,6 +1027,13 @@ ul.side-nav li.sn-item > a > i {
   -webkit-animation-name: Rx-width-80;
   -o-animation-name: Rx-width-80;
   animation-name: Rx-width-80;
+  animation-fill-mode: forwards;
+}
+
+.Rx-width-30 {
+  -webkit-animation-name: Rx-width-30;
+  -o-animation-name: Rx-width-30;
+  animation-name: Rx-width-30;
   animation-fill-mode: forwards;
 }
 
@@ -1946,4 +1963,38 @@ body.clearfix.chooser {
 	position:relative;
 	top: 10px;
     left: 47px;
+}
+
+#status{
+width:90%;
+max-width: 400px;
+text-align: center;
+padding: 8px;
+margin: 5 auto;
+border-radius: 4px;
+}
+
+#status.success{
+background-color: rgb(211, 250, 153);
+animation: status 4s ease forwards;
+}
+
+#status.error{
+background-color: rgb(248, 196, 203);
+animation: status 4s ease forwards;
+}
+
+@keyframes status{
+0%{
+opacity: 1;
+pointer-events: all;
+}
+90%{
+opacity: 1;
+pointer-events: all;
+}
+100%{
+opacity: 0;
+pointer-events: none;
+}
 }
